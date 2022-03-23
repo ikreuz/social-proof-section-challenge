@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --border-card: .4rem;
+    --border-button: 1.6rem;
+
+    /** widths */
+    --break-mobile: 375px;
+
+    --card-height: 15.5rem;
+    --card-width: 22rem;
+
+
+    /** colors primary */
+    --color-very-dark-magenta: hsl(300, 43%, 22%);
+    --color-soft-pink: hsl(333, 80%, 67%);
+
+    /** colors neutral */
+    --color-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --color-light-graysih-magenta: hsl(300, 24%, 96%);
+    --color-white: hsl(0, 0%, 100%);
+
+    /** colors footer */
+    --color-attribution: hsl(228, 45%, 44%);
+
+    --font-size: 15px;
+    --font-size-attribution: .8rem;
+    --font-base: 'Spartan', sans-serif;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+
+    --max-desktop-width: 1156px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--font-size);
+    background-color: var(--color-white);
+}
+
+/** Mobile */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 94vh;
+    max-width: var(--break-mobile);
+    padding: 0;
+}
+
+.bg-pattern-top {
+    background-image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -101rem -22rem, 0 24rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 18rem 18rem 15.7rem 15.7rem;
+    margin: 0px auto;
+    gap: .8rem;
+}
+
+.proof {
+    grid-column: 1/2;
+}
+
+.proof-title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: xx-large;
+    line-height: 1;
+    padding: 5rem 1rem 0;
+    font-weight: var(--font-weight-700);
+    color: var(--color-very-dark-magenta);
+}
+
+.proof-content {
+    font-size: small;
+    margin-top: 1.6rem;
+    padding: 0 2rem .2rem;
+    line-height: 1.8;
+    color: var(--color-dark-grayish-magenta);
+    text-align: center;
+    font-weight: var(--font-weight-500);
+}
+
+.stars {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem;
+    align-self: baseline;
+}
+
+.stars-reviews,
+.stars-guru,
+.stars-besttech {
+    background-color: var(--color-light-graysih-magenta);
+    width: 100%;
+
+}
+
+.stars-reviews {
+    padding: .7rem 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--border-card);
+}
+
+.stars-guru {
+    padding: .7rem 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--border-card);
+}
+
+.stars-besttech {
+    padding: .7rem 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--border-card);
+}
+
+.stars-reviews .rate,
+.stars-guru .rate,
+.stars-besttech .rate {
+    padding: .3rem 0;
+}
+
+.stars-reviews .rate .icon,
+.stars-guru .rate .icon,
+.stars-besttech .rate .icon {
+    margin: 0 .1rem;
+}
+
+.stars-reviews .rate-title,
+.stars-guru .rate-title,
+.stars-besttech .rate-title {
+    padding: .3rem 0;
+    color: var(--color-very-dark-magenta);
+}
+
+.card.card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-1 {
+    grid-column: 1/2;
+    margin-top: 2.5rem;
+    background-color: var(--color-very-dark-magenta);
+    color: var(--color-white);
+    border-radius: var(--border-card);
+    padding-bottom: 2rem;
+    padding: 2.1rem 2rem;
+}
+
+
+
+.card-2 {
+    grid-column: 1/2;
+    background-color: var(--color-very-dark-magenta);
+    color: var(--color-white);
+    border-radius: var(--border-card);
+    padding-bottom: 2rem;
+    padding: 2.1rem 2rem;
+}
+
+.card-3 {
+    grid-column: 1/2;
+    background-color: var(--color-very-dark-magenta);
+    color: var(--color-white);
+    border-radius: var(--border-card);
+    padding-bottom: 2rem;
+    padding: 2.1rem 2rem;
+}
+
+.card-1 img,
+.card-2 img,
+.card-3 img {
+    border-radius: 50%;
+    width: 2.8rem;
+}
+
+.card-header {
+    display: flex;
+    margin-bottom: 1.9rem;
+}
+
+.card-header .card-title {
+    margin-left: 1.7rem;
+    margin-top: .5rem;
+}
+
+.card-header .card-title .card-name {
+    font-size: small;
+}
+
+.card-header .card-title .card-buyer {
+    font-size: small;
+    margin-top: .4rem;
+    color: var(--color-soft-pink);
+    font-weight: var(--font-weight-400);
+}
+
+.card .card-content {
+    font-size: small;
+    line-height: 1.7;
+
+}
+
+.footer {
+    padding: 1rem;
+}
+
+.footer .attribution {
+    color: var(--color-text-paragraph);
+}
+
+.footer .attribution {
+    font-size: .8rem;
+    text-align: center;
+}
+
+.footer .attribution a {
+    color: var(--color-attribution);
+}
+
+/** Desktop */
+@media only screen and (min-width: 1156px) {
+    .container {
+        max-width: var(--max-desktop-width);
+    }
+
+    .bg-pattern-top {
+        background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 5rem -36rem, 8rem 5rem;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 22.5rem 22.5rem 22.5rem;
+        grid-template-rows: 21rem 14.8rem;
+        margin: 0px auto;
+        gap: 1.9rem;
+    }
+
+    .proof {
+        grid-column: 1/2;
+        width: 24.9rem;
+    }
+
+    .proof-title {
+        text-align: left;
+        font-size: xxx-large;
+        padding: 3rem 0 0;
+    }
+
+    .proof-content {
+        text-align: left;
+        padding: 0;
+    }
+
+    .stars {
+        grid-column: 2/4;
+        justify-content: center;
+    }
+
+    .stars-reviews,
+    .stars-guru,
+    .stars-besttech {
+        display: flex;
+        flex-direction: row;
+        padding: 0.8rem;
+        justify-content: flex-start;
+        width: 28rem;
+    }
+
+    .stars-reviews .rate-title,
+    .stars-guru .rate-title,
+    .stars-besttech .rate-title {
+        margin-left: 2.5rem;
+    }
+
+    .stars-reviews {
+        margin-left: 10rem;
+    }
+
+    .stars-guru {
+        margin-left: 13rem;
+    }
+
+    .stars-besttech {
+        margin-left: 15rem;
+    }
+
+    .card-1 {
+        grid-column: 1/2;
+        height: 14.8rem;
+        margin-top: 0;
+        width: 22.5rem;
+    }
+
+    .card-2 {
+        grid-column: 2/3;
+        height: 14.8rem;
+        width: 22.5rem;
+    }
+
+    .card-3 {
+        grid-column: 3/4;
+        height: 14.8rem;
+        width: 22.5rem;
+    }
+}
