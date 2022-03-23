@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [https://github.com/ikreuz](https://github.com/ikreuz/social-proof-section-challenge)
-- Live Site URL: [https://vercel.com]()
+- Live Site URL: [https://vercel.com](https://social-proof-section-challenge-omega.vercel.app/)
 
 ## My process
 
